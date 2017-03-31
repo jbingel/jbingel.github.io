@@ -67,6 +67,11 @@ img.portrait {
 
 }
 
+span.title {
+    color:#b9cce5;
+    font-style:italic;
+}
+
  div.pics {
   position:relative;
 }
@@ -106,12 +111,9 @@ div.container:hover  {
 }
 */            
 a {
-    color:#ff0c73;
-}
-
-a {
     color:#5796ff;
 }
+
  
 p {
     color:#ffffff;
