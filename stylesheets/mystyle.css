@@ -70,10 +70,11 @@ img.portrait {
 span.title {
     color:#b9cce5;
     color:#d1d1d1;
+    color:#ffffff;
     font-style:italic;
 }
 
- div.pics {
+div.pics {
   position:relative;
 }
 
@@ -127,7 +128,13 @@ p.desc {
     padding-top:-204px;
 }
 
+
+h3.pubyear ~ p {
+    color:#aaaaaa;
+}
+
 <!p {
     text-align:center;
 }>
+
 
