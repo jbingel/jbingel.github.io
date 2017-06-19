@@ -1,0 +1,31 @@
+CFG-ish specification for order file:
+
+main => conference_day+
+conference_day => '* ' date '\n' (schedule_item '\n')+
+date => weekday ', September ' day ', 2017'
+schedule_item => nonsci | session
+nonsci => '+ ' time '--' time ' ' schedule_item_title
+session => '= ' time '--' time ' ' schedule_item_title ' %chair ' chair_name (paper '\n')+
+schedule_item_title => .+
+time => hours ':' minutes
+chair_name => surname ', ' name
+paper => paper_id ' ' time '--' time '  # ' paper_title
+paper_title => .+
+paper_id => [1-9][0-9]*
+
+
+For instance:
+
+* date [e.g. * Saturday, September 9, 2017]
++ time--time schedule_item_title [e.g. + 07:30--08:45 Registration and Breakfast]
+= time--time schedule_item_title %chair Surname, Name [e.g. = 10:40--12:20 Session 1A: Semantics (Long Papers) %chair Poon, Hoifung]
+paper_id time:from--time:until  # paper_title  [e.g. 550 11:05--11:30  # Predicate Argument Alignment using a Global Coherence Model]
+= time--time schedule_item_title %chair Surname, Name [e.g. = 10:40--12:20 Session 1B: Tagging, Chunking, Syntax and Parsing (Long + TACL Papers) %chair Smith, Noah A.]
+paper_id time--time  # paper_title  [e.g. 136 11:05--11:30 # An Incremental Algorithm for Transition-based CCG Parsing]
+paper_id time--time  # paper_title  [e.g. 540 11:30--11:55 # Because Syntax Does Matter: Improving Predicate-Argument Structures Parsing with Syntactic Features]
+
+* date [e.g. * Sunday, September 10, 2017]
++ time--time schedule_item_title [e.g. + 07:30--08:45 Registration and Breakfast]
+= time--time schedule_item_title %chair Surname, Name [e.g. = 10:40--12:20 Session 1A: Semantics (Long Papers) %chair Poon, Hoifung]
+paper_id time--time  # paper_title  [e.g. 550 11:05--11:30  # Predicate Argument Alignment using a Global Coherence Model]
+
