@@ -5,8 +5,7 @@ html, body {
 
 
 div.container[w="2"] {
-    width: 65%;
-    margin-right: 5%;
+    width: 100%;
 }
 
 img.portrait {
