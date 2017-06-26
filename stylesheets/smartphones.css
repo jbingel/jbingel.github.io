@@ -1,0 +1,16 @@
+
+html, body {
+    width: 95%;        
+}
+
+
+div.container[w="2"] {
+    width: 65%;
+    margin-right: 5%;
+}
+
+img.portrait {
+    width: 100%;
+
+}
+

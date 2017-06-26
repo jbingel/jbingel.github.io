@@ -3,11 +3,6 @@ html, body {
     width: 40%;        
 }
 
-@media(max-device-width: 480px){
-  html, body {
-    width: 100%;
-  }
-}
 
 html {
     display: table;
